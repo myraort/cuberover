@@ -34,7 +34,7 @@ SOFTWARE. */
 #include <cstring>
 
 // GNC headers
-#include <gnc_control/roboclaw.h>
+#include <cr_control/roboclaw.h>
 
 Roboclaw::Roboclaw(RoboclawSettings* settings) {
     for (int i = 0; i < 256; i++)

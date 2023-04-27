@@ -217,6 +217,7 @@ void WheelHardwareInterface::sendCommandToWheels(Roboclaw* rb)
     scaleCommands();
 
     // prevent zero velocity spamming from ros_control
+    rb->ForwardM1(0x80, 0);
     if (zeroCmdVelCount <= wheelSettings->maxRetries) {
         // if positive, move motors forward. if negative, move backwards
         if (cmd[0] >= 0)  // right_front
